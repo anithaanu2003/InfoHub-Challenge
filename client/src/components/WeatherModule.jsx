@@ -11,7 +11,7 @@ export default function WeatherModule() {
     setLoading(true);
     setError("");
     try {
-      const res = await axios.get(`http://localhost:3001/api/weather?city=${cityName}`);
+      const res = await axios.get(`https://infohub-backend-lov3.onrender.com/api/weather?city=${cityName}`);
       setWeather(res.data);
     } catch {
       setError("Could not load weather data. Please check the city name.");

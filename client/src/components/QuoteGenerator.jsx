@@ -10,7 +10,7 @@ export default function QuoteGenerator() {
     setLoading(true);
     setError("");
     try {
-      const res = await axios.get("http://localhost:3001/api/quote");
+      const res = await axios.get("https://infohub-backend-lov3.onrender.com/api/quote");
       setQuote(res.data);
     } catch {
       setError("Failed to fetch quote.");

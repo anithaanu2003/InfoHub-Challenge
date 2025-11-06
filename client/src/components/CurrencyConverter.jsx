@@ -18,7 +18,7 @@ export default function CurrencyConverter() {
     setResult(null);
 
     try {
-      const res = await axios.get(`http://localhost:3001/api/currency?amount=${amount}`);
+      const res = await axios.get(`https://infohub-backend-lov3.onrender.com/api/currency?amount=${amount}`);
       setResult(res.data);
     } catch {
       setError("Conversion failed. Try again.");

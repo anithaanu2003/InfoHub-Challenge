@@ -1,0 +1,111 @@
+/* Ensure root fills the screen */
+body, #root {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* App container relative for background */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Animated background blobs inside App */
+.background-blobs {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, rgba(13, 92, 220, 0.15), transparent 50%),
+              radial-gradient(circle at 70% 70%, rgba(11, 89, 184, 0.15), transparent 50%);
+  background-size: 50% 50%;
+  animation: moveBg 30s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveBg {
+  0% { background-position: 0% 0%, 100% 100%; }
+  50% { background-position: 50% 50%, 50% 50%; }
+  100% { background-position: 0% 0%, 100% 100%; }
+}
+
+/* Module card styling (semi-transparent) */
+.module {
+  width: 100%;
+  max-width: 400px;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Input & button styling */
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Headings and text inside modules */
+.module h2,
+.module p,
+.module span {
+  text-align: center;
+  width: 100%;
+}
+
+
+/* Responsive */
+@media (max-width: 500px) {
+  .module {
+    padding: 1rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}

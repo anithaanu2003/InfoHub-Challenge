@@ -6,7 +6,7 @@ InfoHub is a **Single-Page Application (SPA)** that combines three essential uti
 - **Currency Converter:** Convert INR → USD/EUR instantly.  
 - **Motivational Quotes:** Generate random daily quotes.  
 
-Live Demo: [Insert your deployed link here]
+Live Demo: https://info-hub-challenge-1.vercel.app/
 
 ---
 
